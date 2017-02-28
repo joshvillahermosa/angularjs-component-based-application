@@ -4,6 +4,8 @@
   function HomeController () {
     var vm = this;
 
+    vm.message = 'Yes';
+
     init();
 
     function init() {
@@ -15,8 +17,8 @@
     bindings: {
       init: '<'
     },
-    template: '<div>Home Page - {{ $ctrl.init }}</div>',
-    controller: HomeComponent
+    templateUrl: 'app/home/home.component.html',
+    controller: HomeController
   };
 
   angular.module('app.home')

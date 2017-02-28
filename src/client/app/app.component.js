@@ -8,7 +8,7 @@
   var AppComponent = {
     controller: AppController,
     controllerAs: '$ctrl',
-    template: '<ui-view></ui-view>',
+    templateUrl: 'app/app.component.html'
   };
 
   angular.module('app')
