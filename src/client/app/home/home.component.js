@@ -1,7 +1,9 @@
 (function () {
   'use strict';
 
-  function HomeController () {
+  HomeController.$inject = ['httpService']
+
+  function HomeController (httpService) {
     var vm = this;
 
     vm.message = 'Yes';
@@ -9,7 +11,7 @@
     init();
 
     function init() {
-      console.log('Home Component init');
+      httpService.printAPI();
     }
   }
 

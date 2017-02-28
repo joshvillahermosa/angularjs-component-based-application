@@ -3,10 +3,10 @@
 
   angular
     .module('app.shared')
-    .service('httpService', httpService)
-    .constant('PEOPLE_API', 'https://randomuser.me/api');
+    .constant('PEOPLE_API', 'https://randomuser.me/api')
+    .service('httpService', httpService);
 
-  httpService.$inject = ['$http'];
+  httpService.$inject = ['PEOPLE_API', '$http'];
 
   function httpService(PEOPLE_API, $http) {
 
