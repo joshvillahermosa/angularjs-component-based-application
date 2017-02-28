@@ -1,7 +1,7 @@
 (function () {
   'use strict';
 
-  HomeController.$inject = ['httpService']
+  HomeController.$inject = ['httpService'];
 
   function HomeController (httpService) {
     var vm = this;
