@@ -3,7 +3,7 @@
 
   angular
     .module('app')
-    .run(runRun)
+    .run(runRun);
 
   runRun.$inject = [];
 

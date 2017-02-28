@@ -3,7 +3,7 @@
 
   angular
     .module('app')
-    .config(appRouteConfig)
+    .config(appRouteConfig);
 
   appRouteConfig.$inject = ['$stateProvider'];
 
@@ -17,7 +17,7 @@
       resolve: {
         init: homeRouteResolve
       }
-    }
+    };
 
     $stateProvider.state(HomeState);
   }
