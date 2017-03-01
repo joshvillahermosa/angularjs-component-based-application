@@ -7,6 +7,10 @@
 
   appRouteConfig.$inject = ['$stateProvider'];
 
+  /**
+   * @todo Add Resolve
+   * @todo Import custom providers
+   */
   function appRouteConfig($stateProvider) {
     console.log('App Route Init');
 
@@ -14,16 +18,9 @@
       name: 'home',
       url: '',
       component: 'ttHomeComponent',
-      resolve: {
-        init: homeRouteResolve
-      }
     };
 
     $stateProvider.state(HomeState);
-  }
-
-  function homeRouteResolve() {
-    return 'Home Page Resolved';
   }
 
 }());
