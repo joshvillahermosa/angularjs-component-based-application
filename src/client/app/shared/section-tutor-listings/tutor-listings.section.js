@@ -18,6 +18,9 @@
   }
 
   var TutorListingsSection = {
+    bindings: {
+      tutors: '<'
+    },
     templateUrl: 'app/shared/section-tutor-listings/tutor-listings.section.html',
     controller: TutorListingsController
   };
