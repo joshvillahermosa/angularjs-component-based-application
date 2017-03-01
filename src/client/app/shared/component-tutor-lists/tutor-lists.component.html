@@ -1,3 +1,6 @@
-<div ng-repeat="tutor in $ctrl.tutors">
-  {{ tutor.name }}
+<div class="row">
+  <tt-tutor-card-component
+    ng-repeat="tutor in $ctrl.tutors" 
+    tutor="tutor"
+  ></tt-tutor-card-component>
 </div>

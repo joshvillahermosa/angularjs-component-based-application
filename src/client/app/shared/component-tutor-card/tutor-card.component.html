@@ -1,0 +1,27 @@
+<div class="tutor-card col-md-6">
+  <div class="margin-all-10 padding-all-10 border-all-grey">
+    <div class="text-center">
+      <img
+        src="{{ $ctrl.tutor.picture.large }}"
+        alt=""
+        class="row img-circle" />
+    </div>
+
+    <h3 class="row text-center">
+      <a href="">{{ $ctrl.tutor.name.first }} {{ $ctrl.tutor.name.last}}</a>
+    </h3>
+
+    <div class="row">
+      <dl>
+        <dt>Email: </dt>
+        <dd>
+          <a href="mailto:{{ $ctrl.tutor.email }}">{{ $ctrl.tutor.email }}</a>
+        </dd>
+
+        <dt>Country: </dt>
+        <dd>{{ $ctrl.tutor.nat | isoCountryFromAbbreviation }}</dd>
+
+      </dl>
+    </div>
+  </div>
+</div>
