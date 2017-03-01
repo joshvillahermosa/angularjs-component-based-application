@@ -8,6 +8,7 @@
     'app.shared',
     'app.home',
     // 3rd Party Modules
-    'ui.router'
+    'ui.router',
+    'isoCountryFilter'
   ]);
 })();
