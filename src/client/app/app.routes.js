@@ -1,26 +1,18 @@
 (function () {
   'use strict';
 
+  var HomeRoutesService;
+
   angular
     .module('app')
     .config(appRouteConfig);
 
-  appRouteConfig.$inject = ['$stateProvider'];
+  appRouteConfig.$inject = ['$stateProvider', 'homeRoutesProvider'];
 
-  /**
-   * @todo Add Resolve
-   * @todo Import custom providers
-   */
-  function appRouteConfig($stateProvider) {
-    console.log('App Route Init');
+  function appRouteConfig($stateProvider, homeRoutesProvider) {
 
-    var HomeState = {
-      name: 'home',
-      url: '',
-      component: 'ttHomeComponent',
-    };
-
-    $stateProvider.state(HomeState);
+    // Set state in $stateProvider
+    $stateProvider.state(homeRoutesProvider.getRouteDefinition());
   }
 
 }());

@@ -6,30 +6,26 @@
   function HomeController (httpService) {
     var vm = this;
 
-    vm.tutors = []
-
     init();
 
     vm.$onInit = function() {
-      // Gets lists
-      httpService.getTutorList(6)
-        .then(onTutorListSuccess.bind(vm), httpService.printSimpleError)
+      console.log(vm)
     }
 
     function init() {
       httpService.printAPI();
     }
-
-    function onTutorListSuccess(data) {
-      vm.tutors = httpService.abstractData(data) || [];
-    }
   }
 
   var HomeComponent = {
+    bindings: {
+      tutors: '<'
+    },
     templateUrl: 'app/home/home.component.html',
     controller: HomeController
   };
 
   angular.module('app.home')
+    .controller('HomeController', HomeController)
     .component('ttHomeComponent', HomeComponent);
 })();

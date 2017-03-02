@@ -32,7 +32,8 @@
     }
 
     function getTutorList(limit) {
-      return get('/?results=' + limit);
+      return get('/?results=' + limit)
+        .then(abstractData);
     }
 
     function printSimpleError(e, callback) {
