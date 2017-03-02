@@ -8,7 +8,11 @@
     </div>
 
     <h3 class="row text-center">
-      <a href="">{{ $ctrl.tutor.name.first }} {{ $ctrl.tutor.name.last}}</a>
+
+      <!-- Note here: css uppercase::first-letter wont work if
+      its split between two lines and not a `p` tag. So we will
+      create a filter-->
+      <a href="">{{ $ctrl.tutor.name.first | uppercaseFirstLetter }} {{ $ctrl.tutor.name.last | uppercaseFirstLetter }}</a>
     </h3>
 
     <div class="row">
