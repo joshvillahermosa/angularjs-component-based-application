@@ -7,6 +7,7 @@
     // Custom modules
     'app.shared',
     'app.home',
+    'app.tutor',
     // 3rd Party Modules
     'ui.router',
     'isoCountryFilter'
