@@ -1,20 +1,19 @@
 (function () {
   'use strict';
 
-  TutorController.$inject = ['httpService'];
+  TutorController.$inject = ['$stateParams', 'httpService'];
 
-  function TutorController (httpService) {
+  function TutorController ($stateParams, httpService) {
     var vm = this;
 
-    init();
-
-    vm.$onInit = function() {
+    vm.$onInit = init;
+    
+    function init() {
+      console.log('$init');
       vm.tutor = (vm.tutor) ? vm.tutor : [];
+      console.log('tutor: ', vm.tutor);
     };
 
-    function init() {
-      httpService.printAPI();
-    }
   }
 
   var TutorComponent = {

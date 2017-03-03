@@ -31,14 +31,16 @@
     function getRouteDefinition() {
       return {
         name: 'tutor',
-        url: '/tutor',
+        url: '/tutor/:id',
         component: 'ttTutorComponent',
-        // resolve: {
-        //   tutors: function(httpService) {
-        //     return httpService.getTutorList(6)
-        //   }
-        // }
+        resolve: {
+          tutor: resolveTutor
+        }
       };
+    }
+
+    function resolveTutor($stateParams, httpService) {
+      return httpService.getTutor($stateParams.id);
     }
   }
 })();

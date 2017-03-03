@@ -6,11 +6,7 @@
   function HomeController (httpService) {
     var vm = this;
 
-    init();
-
-    vm.$onInit = function() {
-      console.log(vm);
-    };
+    vm.$onInit = init;
 
     function init() {
       httpService.printAPI();

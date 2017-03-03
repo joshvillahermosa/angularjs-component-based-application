@@ -4,7 +4,6 @@
   angular
     .module('app.home')
     .provider('homeRoutes', HomeRoutesProviders);
-    // .service('homeRoutesService', HomeRoutesService);
 
 
   function HomeRoutesProviders() {
@@ -36,11 +35,13 @@
         url: '',
         component: 'ttHomeComponent',
         resolve: {
-          tutors: function(httpService) {
-            return httpService.getTutorList(6);
-          }
+          tutors: resolveTutors
         }
       };
+    }
+
+    function resolveTutors(httpService) {
+      return httpService.getTutorList(6);
     }
   }
 })();
