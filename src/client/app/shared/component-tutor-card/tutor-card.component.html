@@ -1,10 +1,11 @@
 <div class="tutor-card col-md-6">
   <div class="margin-all-10 padding-all-10 border-all-grey">
     <div class="text-center">
-      <img
-        src="{{ $ctrl.tutor.picture.large }}"
-        alt=""
-        class="row img-circle" />
+      <tt-avatar-component
+        avatar-url="$ctrl.tutor.picture.large"
+        alt-text="$ctrl.tutor.name.first + ' ' +  $ctrl.tutor.name.last"
+        set-size="'m'"
+      ></tt-avatar-component>
     </div>
 
     <h3 class="row text-center">
@@ -12,7 +13,7 @@
       <!-- Note here: css uppercase::first-letter wont work if
       its split between two lines and not a `p` tag. So we will
       create a filter-->
-      <a href="">{{ $ctrl.tutor.name.first | uppercaseFirstLetter }} {{ $ctrl.tutor.name.last | uppercaseFirstLetter }}</a>
+      <a ui-sref="tutor({username: $ctrl.tutor.login.username})"d>{{ $ctrl.tutor.name.first | uppercaseFirstLetter }} {{ $ctrl.tutor.name.last | uppercaseFirstLetter }}</a>
     </h3>
 
     <div class="row">
