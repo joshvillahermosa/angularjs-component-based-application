@@ -9,8 +9,8 @@
     init();
 
     vm.$onInit = function() {
-      console.log(vm)
-    }
+      console.log(vm);
+    };
 
     function init() {
       httpService.printAPI();

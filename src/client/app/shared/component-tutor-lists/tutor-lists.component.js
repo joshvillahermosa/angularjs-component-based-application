@@ -14,7 +14,7 @@
      */
     vm.$onInit = function () {
       vm.tutors = (!!vm.tutors) ? vm.tutors : [];
-    }
+    };
 
     function init() { }
   }
@@ -25,7 +25,7 @@
     },
     controller: TutorListsController,
     templateUrl: 'app/shared/component-tutor-lists/tutor-lists.component.html'
-  }
+  };
 
   angular.module('app.shared')
     .component('ttTutorListsComponent', TutorListsComponent);

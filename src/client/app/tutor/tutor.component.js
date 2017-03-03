@@ -9,9 +9,8 @@
     init();
 
     vm.$onInit = function() {
-      vm.tutor = (vm.tutor) ? vm.tutor : []
-      // console.log(vm)
-    }
+      vm.tutor = (vm.tutor) ? vm.tutor : [];
+    };
 
     function init() {
       httpService.printAPI();

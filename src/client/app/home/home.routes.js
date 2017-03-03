@@ -15,7 +15,7 @@
     };
 
     this.$get = ['httpService', function(httpService) {
-      return homeRoutesService = new HomeRoutesService()
+      return new HomeRoutesService();
     }];
   }
 
@@ -37,7 +37,7 @@
         component: 'ttHomeComponent',
         resolve: {
           tutors: function(httpService) {
-            return httpService.getTutorList(6)
+            return httpService.getTutorList(6);
           }
         }
       };

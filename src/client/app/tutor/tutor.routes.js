@@ -13,7 +13,7 @@
     };
 
     this.$get = ['httpService', function(httpService) {
-      return tutorRoutesService = new TutorRoutesService()
+      return new TutorRoutesService();
     }];
   }
 

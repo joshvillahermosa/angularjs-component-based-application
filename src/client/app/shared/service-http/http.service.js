@@ -44,7 +44,7 @@
       var request = {
         method: 'GET',
         url: PEOPLE_API + postpend
-      }
+      };
 
       return $http(request);
     }
