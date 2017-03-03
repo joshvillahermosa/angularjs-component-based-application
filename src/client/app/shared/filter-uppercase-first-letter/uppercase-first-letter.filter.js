@@ -11,9 +11,9 @@
 
     function uppercaseFirstLetterFilter(input) {
       
-      input = input.split('')[0].toUpperCase().join('');
-      // input[0] = input[0].toUpperCase();
-      // input = input.join('');
+      input = input.split('');
+      input[0] = input[0].toUpperCase();
+      input = input.join('');
 
       return input; 
     }
