@@ -1,2 +1,11 @@
-<h1>Hey wassup hello</h1>
+<tt-avatar-component
+  class="block text-center"
+  avatar-url="$ctrl.tutor.picture.large"
+  alt-text="ctrl.tutor.name.first + ' ' + $ctrl.tutor.name.last"
+  set-size="'l'"
+></tt-avatar-component>
+
+<h1 class="text-center">{{ $ctrl.tutor.name.first | uppercaseFirstLetter }} {{ $ctrl.tutor.name.last | uppercaseFirstLetter }}</h1>
+
+<!-- Sampel Data -->
 {{ $ctrl.tutor | json }}

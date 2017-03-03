@@ -31,7 +31,7 @@
     function getRouteDefinition() {
       return {
         name: 'tutor',
-        url: '/tutor/:id',
+        url: '/tutor/:username',
         component: 'ttTutorComponent',
         resolve: {
           tutor: resolveTutor
@@ -40,7 +40,7 @@
     }
 
     function resolveTutor($stateParams, httpService) {
-      return httpService.getTutor($stateParams.id);
+      return httpService.getTutor($stateParams.username);
     }
   }
 })();
