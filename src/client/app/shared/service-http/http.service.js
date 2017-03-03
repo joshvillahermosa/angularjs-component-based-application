@@ -14,6 +14,7 @@
 
     var service = {
       getTutorList: getTutorList,
+      getTutor: getTutor,
       abstractData: abstractData,
       printSimpleError: printSimpleError,
       printAPI: printAPI
@@ -34,6 +35,14 @@
     function getTutorList(limit) {
       return get('/?results=' + limit)
         .then(abstractData);
+    }
+
+    /**
+     * Unfortunately RandomUserAPI does not allow to retrieve specific ID, so
+     * pretend to get one.
+     */
+    function getTutor(id) {
+      return get('').then(abstractData);
     }
 
     function printSimpleError(e, callback) {

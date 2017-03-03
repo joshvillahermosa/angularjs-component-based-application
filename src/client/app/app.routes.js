@@ -16,7 +16,8 @@
   function appRouteConfig(
     $stateProvider,
     homeRoutesProvider,
-    tutorRoutesProvider) {
+    tutorRoutesProvider
+  ) {
 
     // Set state in $stateProvider
     $stateProvider.state('home',homeRoutesProvider.getRouteDefinition());
