@@ -5,6 +5,9 @@
     .module('app.shared')
     .service('textUtilsService', textUtilsService);
 
+  /**
+   * General Text based services
+   */
   function textUtilsService() {
     var service = {
       checkHeaderType: checkHeaderType
@@ -13,7 +16,8 @@
     return service;
 
     /**
-     * This will check the header type and set defaults
+     * This will check the header type and set defaults. This is used in
+     * text-header.component
      */
     function checkHeaderType(headerType) {
       if (!headerType) {
