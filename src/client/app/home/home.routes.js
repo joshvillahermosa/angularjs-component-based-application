@@ -5,7 +5,6 @@
     .module('app.home')
     .provider('homeRoutes', HomeRoutesProviders);
 
-
   function HomeRoutesProviders() {
     var homeRoutesService = new HomeRoutesService();
 

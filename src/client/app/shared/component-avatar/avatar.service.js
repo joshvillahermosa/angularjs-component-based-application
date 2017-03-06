@@ -3,7 +3,7 @@
 
   angular
     .module('app.shared')
-    .service('avatarService', AvatarService)
+    .service('avatarService', AvatarService);
 
   function AvatarService($http) {
     var service = {
@@ -24,7 +24,7 @@
       };
 
       var defualtSize = 'm';
-      
+
       // If there is no size
       if (!size) {
         console.error('Size is not passed in: Defaulting to (m)edium image size');

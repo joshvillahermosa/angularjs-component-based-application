@@ -7,11 +7,10 @@
     var vm = this;
 
     vm.$onInit = init;
-    
+
     function init() {
       vm.tutor = (vm.tutor) ? vm.tutor[0] : {};
-    };
-
+    }
   }
 
   var TutorComponent = {

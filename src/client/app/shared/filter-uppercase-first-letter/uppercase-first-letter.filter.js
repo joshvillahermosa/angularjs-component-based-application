@@ -10,12 +10,12 @@
     return uppercaseFirstLetterFilter;
 
     function uppercaseFirstLetterFilter(input) {
-      
+
       input = input.split('');
       input[0] = input[0].toUpperCase();
       input = input.join('');
 
-      return input; 
+      return input;
     }
   }
 
