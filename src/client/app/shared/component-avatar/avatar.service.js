@@ -5,6 +5,10 @@
     .module('app.shared')
     .service('avatarService', AvatarService);
 
+
+  /**
+   * Service specific for the avatar component
+   */
   function AvatarService($http) {
     var service = {
       checkSizeInput: checkSizeInput
@@ -13,7 +17,8 @@
     return service;
 
     /**
-     * Will check size input and handle accordingly
+     * Will check size input and handle accordingly. Will return defualt value
+     * of 'w150'
      */
     function checkSizeInput(size) {
 
