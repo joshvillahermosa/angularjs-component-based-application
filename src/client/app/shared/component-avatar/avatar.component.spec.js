@@ -39,20 +39,21 @@ describe('Avatar Component', function() {
 
     // Mock Avatar Service
     bard.mockService(avatarService, {
-      checkSizeInput: function(s) {return (s) ? s : 'm'}
+      checkSizeInput: function(s) {return (s) ? s : 'm';}
     });
   });
 
 
   describe('Avatar Component Properteies', function() {
     var bindings;
+    var defaultUrl = 'http://static.boredpanda.com/blog/wp-content/uploads/2015/06/pallas-cat-manul-2__880.jpg';
 
     beforeEach(function() {
       bindings = {
         altText: 'Sample Text',
         avatarUrl: 'http://sampleurl.com/img.png',
         setSize: 'l'
-      }
+      };
     });
 
     describe('Receiving Alt Text', function() {
@@ -81,7 +82,7 @@ describe('Avatar Component', function() {
         bindings.avatarUrl = undefined;
         var controller = $componentController('ttAvatarComponent',  null, bindings);
         controller.$onInit();
-        expect(controller.avatarUrl).to.equal('http://static.boredpanda.com/blog/wp-content/uploads/2015/06/pallas-cat-manul-2__880.jpg');
+        expect(controller.avatarUrl).to.equal(defaultUrl);
       });
     });
 
@@ -92,7 +93,7 @@ describe('Avatar Component', function() {
       it('Just chuck testa bard.mocks', function() {
         var controller = $componentController('ttAvatarComponent',  null, bindings);
         controller.$onInit();
-        expect(controller.setSize).to.equal('l')
+        expect(controller.setSize).to.equal('l');
       });
     });
   });

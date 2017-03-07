@@ -20,7 +20,7 @@ describe('Text Util Service', function () {
 
     afterEach(function() {
       console.error.restore();
-    })
+    });
 
     it('should return normal \'h1\' string if h1 is passed in', function () {
       var output = $service.checkHeaderType('h1');
