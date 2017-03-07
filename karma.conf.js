@@ -16,7 +16,7 @@ module.exports = function(config) {
     exclude: gulpConfig.karma.exclude,
 
     proxies: {
-      '/': 'http://localhost:8888/'
+      '/src/app': 'http://localhost:8888/'
     },
 
     // preprocess matching files before serving them to the browser
@@ -54,6 +54,12 @@ module.exports = function(config) {
 
     // Continuous Integration mode
     // if true, Karma captures browsers, runs the tests and exits
-    singleRun: false
+    singleRun: false,
+
+    // Specific to get Template Urls
+    ngHtml2JsPreprocessor: {
+      stripPrefix: 'src/app',
+      moduleName: 'templates'
+    }
   });
 };

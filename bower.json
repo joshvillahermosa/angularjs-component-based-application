@@ -27,7 +27,7 @@
     "moment": "~2.12.0",
     "toastr": "~2.1.2",
     "angular-bootstrap": "~1.2.5",
-    "angular-ui-router": "1.0.0-beta.3",
+    "angular-ui-router": "1.0.0-rc.1",
     "angular-iso-country-filter": "^0.0.1"
   },
   "resolutions": {
