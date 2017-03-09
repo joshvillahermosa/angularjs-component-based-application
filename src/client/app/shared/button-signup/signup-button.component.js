@@ -6,15 +6,10 @@
     var vm = this;
 
     vm.$onInit = init;
-    vm.toggleModal = toggleModal;
 
     function init() {
-      vm.showModal = false;
       vm.modalTitle = 'Signup Now for sleepy time!';
-    }
-
-    function toggleModal() {
-      vm.showModal = !vm.showModal;
+      vm.modalId = "signupModalHeader"
     }
   }
 

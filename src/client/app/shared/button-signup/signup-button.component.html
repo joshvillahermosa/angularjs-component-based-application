@@ -1,9 +1,14 @@
 <div class="js-signup-button">
-  <button class="btn btn-primary">Sign up!</button>
+  <button 
+    class="btn btn-primary"
+    data-toggle="modal"
+    data-target="#{{$ctrl.modalId}}">
+    Sign up!
+  </button>
 
   <tt-modal-component
-    title="$ctrl.title"
-    is-open="$ctrl.showModal">
+    title="$ctrl.modalTitle"
+    modal-id="$ctrl.modalId">
     <tt-signup-component></tt-signup-component>
   </tt-modal-component>
 </div>

@@ -14,15 +14,12 @@ describe('Signup Button', function() {
   });
 
   describe('Signup Button Initial State', function() {
-    it('should not show the modal on initial state', function() {
-      expect(component.showModal).to.equal(false);
+    it('should have a title', function() {
+      expect(component.modalTitle).to.equal('Signup Now for sleepy time!');
+    });
+
+    it('should have a modal ID', function() {
+      expect(component.modalId).to.equal('signupModalHeader');
     });
   });
-
-  describe('Showing modal', function() {
-    it('should show the modal when clicked', function() {
-      component.toggleModal();
-      expect(component.showModal).to.equal(true);
-    });
-  })
 });
