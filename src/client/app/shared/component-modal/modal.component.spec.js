@@ -17,22 +17,22 @@ describe('Modal Component', function() {
     beforeEach(function() {
       bindings = {
         title: 'Sample Title',
-        isOpen: true
+        modalId: 'myModal'
       };
 
       component = $componentController('ttModalComponent', null, bindings);
     });
 
-    it('should have the modal closed', function() {
-      bindings.isOpen = false;
+    it('should have defualt modal title', function() {
+      bindings.modalId = undefined;
       component = $componentController('ttModalComponent', null, bindings);
       component.$onInit();
-      expect(component.isOpen).to.equal(false);
+      expect(component.modalId).to.equal('defaultModalId');
     });
 
-    it('should have the modal opened if passed in true', function() {
+    it('should have displu the given modal title', function() {
       component.$onInit();
-      expect(component.isOpen).to.equal(true);
+      expect(component.modalId).to.equal('myModal');
     });
 
     it('should default to empty title string if there is no title', function() {

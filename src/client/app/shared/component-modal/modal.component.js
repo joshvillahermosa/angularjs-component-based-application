@@ -10,9 +10,10 @@
     vm.$onInit = init;
 
     function init() {
+      console.log(vm.title);
       vm.title = (vm.title) ? vm.title : '',
-      vm.isOpen = (vm.isOpen && (typeof(vm.isOpen) === 'boolean')) ?
-        vm.isOpen : false; 
+      vm.modalId = (vm.modalId && (typeof(vm.modalId) === 'string')) ?
+        vm.modalId : 'defaultModalId'; 
     }
   }
 
@@ -22,7 +23,7 @@
   var ModalComponent = {
     bindings: {
       title: '<',
-      isOpen: '<'
+      modalId: '<'
     },
     controller: ModalController,
     templateUrl: 'app/shared/component-modal/modal.component.html',
