@@ -17,7 +17,7 @@
   }
 
   /**
-   * @todo Add multple Transclusions
+   * @todo Add multple Transclusions for body and footer
    */
   var ModalComponent = {
     bindings: {
