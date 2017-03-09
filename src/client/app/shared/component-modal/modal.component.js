@@ -16,13 +16,17 @@
     }
   }
 
+  /**
+   * @todo Add multple Transclusions
+   */
   var ModalComponent = {
     bindings: {
       title: '<',
       isOpen: '<'
     },
     controller: ModalController,
-    templateUrl: 'app/shared/component-modal/modal.component.html'
+    templateUrl: 'app/shared/component-modal/modal.component.html',
+    transclude: true
   }
 
   angular
