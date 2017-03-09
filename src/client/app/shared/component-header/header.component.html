@@ -5,14 +5,19 @@
       <a ui-sref="home" class="navbar-brand text-info padding-none-left">
         Tutor Track
       </a>
-
-      <ul class="nav navbar-nav navbar-right">
-        <li>
-          <a ui-sref="home">
-            View Your Tutor Schedule
-          </a>
-        </li>
-      </ul>
     </div>
+
+    <ul class="nav navbar-nav navbar-right">
+      <li>
+        <a ui-sref="home">
+          <!-- @todo Hide when logged in-->
+          View Your Tutor Schedule
+        </a>
+      </li>
+
+      <li>
+        <tt-signup-button-component class="margin-top-8 block"></tt-signup-button-component>
+      </li>
+    </ul>
   </tt-full-width-layout>
 </nav>
