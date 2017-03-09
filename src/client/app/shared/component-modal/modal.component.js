@@ -10,7 +10,6 @@
     vm.$onInit = init;
 
     function init() {
-      console.log(vm.title);
       vm.title = (vm.title) ? vm.title : '',
       vm.modalId = (vm.modalId && (typeof(vm.modalId) === 'string')) ?
         vm.modalId : 'defaultModalId'; 

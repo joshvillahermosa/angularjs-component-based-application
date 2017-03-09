@@ -9,6 +9,9 @@
 
     vm.user={};
 
+    /**
+     * @todo Create a Service to Generate this
+     */
     vm.signupDefinition = [
       {
         key: 'name',
@@ -48,9 +51,7 @@
       }, 
     ];
 
-    function init() {
-      console.log(vm.signupDefinition);
-    }
+    function init() {}
   }
 
   var SignupComponent = {
